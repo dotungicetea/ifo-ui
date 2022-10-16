@@ -1,0 +1,120 @@
+.coundown {
+    position: relative;
+    min-height: 100vh;
+    background: #192EB1;
+    overflow: hidden;
+    .header-coundown {
+        display: flex;
+        padding: 20px 0;
+        .logo-coundown {
+            width: 220px;
+            height: 40px;
+            margin-right: auto;
+        }
+        .button-connect-wallet {
+            height: 40px;
+            font-size: 20px;
+            color: #607DFF;
+        }
+        .path {
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+    h1 {
+        margin-top: 55px;
+        text-align: center;
+        font-size: 50px;
+        color: #FFFFFF;
+        font-weight: bold;
+        span {
+            color: #FAFF00;
+            font-weight: bold;
+        }
+        div:last-child {
+            font-size: 40px;
+        }
+    }
+    h2 {
+        margin-top: 20px;
+        font-size: 24px;
+        text-align: center;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+    .coundown-number {
+        display: flex;
+        width: fit-content;
+        margin: 26px auto;
+        ul {
+            list-style-type: none;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 50px;
+            height: 90px;
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 87px;
+            // box-shadow: 0 2px 5px rgb(0 0 0 / 30%);
+            overflow: hidden;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: linear-gradient(180deg, #192EB1 0%, rgba(25, 46, 177, 0) 27.6%, rgba(25, 46, 177, 0) 76.56%, #192EB1 100%);
+                z-index: 2;
+            }
+            li {
+                color: #FFFFFF;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                font-weight: bold;
+                vertical-align: baseline;
+                // background: #00C7F4;
+                text-align: center;
+                border-radius: 6px;
+                z-index: 1;
+                transform: translateY(90px);
+            }
+            .before {
+                animation: hide 0.5s linear;
+            }
+            .active {
+                animation: active 0.5s linear;
+                transform: translateY(0px);
+            }
+            @keyframes hide {
+                from {
+                    transform: translateY(0px);
+                }
+                to {
+                    transform: translateY(-90px);
+                }
+            }
+            @keyframes active {
+                from {
+                    transform: translateY(90px);
+                }
+                to {
+                    transform: translateY(0px);
+                }
+            }
+        }
+        .coundown-list {
+            display: flex;
+            margin-right: 30px;
+            ul {
+                position: relative;
+            }
+        }
+    }
+}

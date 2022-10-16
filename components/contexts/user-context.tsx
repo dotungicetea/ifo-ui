@@ -1,11 +1,21 @@
 import React, { createContext } from "react";
 
+export type walletConnected = {
+  chainId: number;
+  balance: number;
+  address: string;
+}
+
 export type UserContextType = {
-  loginUser: any,
-  setLoginUser: (user: any) => void,
+  isShowModalConnect: boolean,
+  setIsShowModalConnect: (user: any) => void,
+  walletConnect: walletConnected;
+  setWalletConnect: (wallet: walletConnected) => void
 };
 
 export const UserContext = createContext<UserContextType>({
-  loginUser: '',
-  setLoginUser: () => {},
+  isShowModalConnect: false,
+  setIsShowModalConnect: () => {},
+  walletConnect: {chainId: 0, balance: 0, address: ''},
+  setWalletConnect: () => {}
 });

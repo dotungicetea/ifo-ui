@@ -1,9 +1,11 @@
+@import './font.scss';
+@import './coundown.scss';
+@import './responsive.scss';
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #000000;
 }
 
@@ -18,4 +20,60 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'Urbanist';
+  font-weight: 400;
+}
+
+.image-component {
+  position: relative;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.coundown-top-down {
+  animation: downAnimation 0.35s linear ;
+}
+
+.coundown-top-up {
+  animation: upAnimation 0.35s linear ;
+  animation-delay: 0.35s;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+@keyframes downAnimation {
+  from {
+      background: #00C7F4;
+      transform: translate(-50%, 0) rotateX(0deg);
+      // color: #000000;
+  }
+  to {
+      background: linear-gradient(180deg, rgba(0, 199, 244, 0) 0%, #0C92A6 52.08%);
+      transform: translate(-50%, 0) rotateX(-90deg);
+      color: #FFFFFF;
+  }
+}
+
+@keyframes upAnimation {
+  from {
+      background: linear-gradient(180deg, #0C92A6 48.96%, rgba(0, 199, 244, 0) 100%);
+      transform: translate(-50%, 0) rotateX(-90deg);
+      color: #FFFFFF;
+  }
+  to {
+      background: #00C7F4;
+      transform: translate(-50%, 0) rotateX(0deg);
+      // color: #000000;
+  }
+}
+
+@media (max-width: $underDesktop) {
+  .container {
+    max-width: 768px;
+  }
 }

@@ -1,13 +1,23 @@
 export const HeaderObjPath = [
   {
-    key: "POOL",
-    path: "pool",
-    title: "Pool",
+    key: "IFO",
+    path: "ifo",
+    title: "IFO",
   },
   {
-    key: "STAKING",
-    path: "staking",
-    title: "Staking",
+    key: "PROJECTS",
+    path: "projects",
+    title: "Projects",
+  },
+  {
+    key: "STAKE",
+    path: "stake",
+    title: "Stake",
+  },
+  {
+    key: "FAQ",
+    path: "faq",
+    title: "FAQ",
   },
 ];
 
@@ -32,14 +42,42 @@ export const networks = [
   networksEnum.POLYGON,
 ];
 
+export const networksImg = [
+  { img: "/images/header/ETH.svg", title: 'Ethereum' },
+  { img: "/images/header/BSC.svg", title: 'BSC' },
+  { img: "/images/header/Polygon.svg", title: 'Polygon' },
+];
+
 export const wallet = [
   walletsEnum.METAMASK,
   walletsEnum.WALLETCONNECT,
   walletsEnum.BSCWALLET,
 ];
 
+export const walletImg = [
+  { img: "/images/header/metamask.png", title: 'Metamask' },
+  { img: "/images/header/WalletConnect.png", title: 'Wallet Connect' },
+  { img: "/images/header/bsc_wallet.svg", title: 'BSC Wallet' },
+];
+
 export const walletByNetwork = {
-  ethereum: { wallets: wallet, networkName: walletsEnum.METAMASK },
-  bsc: { wallets: wallet, networkName: networksEnum.BSC },
-  polygon: { wallets: [walletsEnum.METAMASK, walletsEnum.WALLETCONNECT], networkName: networksEnum.POLYGON },
+  ethereum: { wallets: walletImg, networkName: walletsEnum.METAMASK },
+  bsc: { wallets: walletImg, networkName: networksEnum.BSC },
+  polygon: {
+    wallets: [
+      { img: "/images/header/metamask.png", title: 'Metamask' },
+      {
+        img: "/images/header/WalletConnect.png",
+        title: 'Wallet Connect',
+      },
+    ],
+    networkName: networksEnum.POLYGON,
+  },
 };
+
+export const socialsFooter = [
+  { img: "/images/footer/twitter.svg", title: 'Twitter', url: '' },
+  { img: "/images/footer/telegram.svg", title: 'Telegram', url: '' },
+  { img: "/images/footer/facebook.svg", title: 'Facebook', url: '' },
+  { img: "/images/footer/linkedin.svg", title: 'Linked In', url: '' },
+]

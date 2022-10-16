@@ -1,0 +1,293 @@
+@import '../responsive.scss';
+
+.header {
+    position: relative;
+    height: 78px;
+    color: #ffffff;
+    .headerPosition {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: #1B1B1B;
+        z-index: 100;
+        .headerLogo {
+            width: 152px;
+            height: 27px;
+            margin-right: auto;
+        }
+        .headerContainer {
+            display: flex;
+            padding: 15px 20px;
+            align-items: center;
+        }
+        .chainBox {
+            display: flex;
+            margin-left: 22px;
+            padding: 8px 18px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            align-items: center;
+            background: #1B1B1B;
+            border: 1px solid #44454B;
+            border-radius: 4px;
+            .chainImage {
+                width: 16px;
+                height: 16px;
+                margin-right: 7px;
+            }
+        }
+        .wallet {
+            display: flex;
+            width: 224px;
+            padding: 2px 2px 2px 12px;
+            align-items: center;
+            background: #00C7F4;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 18px;
+            div {
+                width: 100%;
+                font-weight: 700;
+            }
+            span {
+                padding: 6px 12px;
+                background: #161616;
+                border-radius: 4px;
+            }
+        }
+        .path {
+            display: flex;
+            align-items: center;
+            font-family: 'Plus Jakarta Sans';
+            font-size: 16px;
+            line-height: 32px;
+            a:hover {
+                color: #00E0FF;
+            }
+        }
+        .buttonConnect {
+            width: 271px;
+            height: 48px;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+        .headerShowMobile {
+            display: none;
+        }
+    }
+}
+
+.footer {
+    height: 300px;
+    padding: 72px 0 38px;
+    background: #101010;
+    color: #ffffff;
+    .footerContent {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        max-width: 1240px;
+        margin: auto;
+        padding: 0 20px;
+        .footerLeft {
+            .logo {
+                width: 152px;
+                height: 27px;
+            }
+            p {
+                padding: 18px 0;
+                font-size: 13px;
+                line-height: 20px;
+            }
+            .socail {
+                display: flex;
+                gap: 17px;
+                div {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        }
+        .footerRight {
+            .siteMap {
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 32px;
+            }
+            .path {
+                display: grid;
+                margin-top: 11px;
+                grid-template-columns: 150px 150px 150px;
+                font-size: 13px;
+                line-height: 32px;
+                a:hover {
+                    color: #00E0FF;
+                }
+            }
+        }
+    }
+    .footerDes {
+        margin-top: 68px;
+        font-size: 12px;
+        text-align: center;
+        color: #AEAEAE;
+    }
+}
+
+.commingSoon {
+    height: calc(100vh - 378px);
+    min-height: 215px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+@media (max-width: $underDesktop) {
+    .header {
+        position: relative;
+        height: 58px;
+        color: #ffffff;
+        .headerPosition {
+            .headerLogo {
+                width: 140px;
+                height: 27px;
+            }
+            .headerContainer {
+                display: flex;
+                padding: 10px 20px;
+                align-items: center;
+                .chainBox {
+                    margin-left: 20px;
+                }
+            }
+            .path {
+                font-size: 12px;
+                line-height: 16px;
+                margin-left: 20px;
+            }
+            .buttonConnect {
+                width: 150px;
+                height: 35px;
+                margin-left: 10px;
+                font-size: 14px;
+            }
+        }
+    }
+    
+    .footer {
+        height: 200px;
+        padding: 30px 0 20px;
+        .footerContent {
+            max-width: 100%;
+            padding: 0 20px;
+            .footerLeft {
+                .logo {
+                    width: 140px;
+                    height: 27px;
+                }
+                p {
+                    padding: 10px 0;
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+                .socail {
+                    gap: 10px;
+                    div {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+            .footerRight {
+                .siteMap {
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 32px;
+                }
+                .path {
+                    grid-template-columns: 90px 90px 90px;
+                }
+            }
+        }
+        .footerDes {
+            margin-top: 30px;
+            font-size: 10px;
+        }
+    }
+
+    .commingSoon {
+        height: calc(100vh - 258px);
+        min-height: 180px;
+    }
+}
+
+@media (max-width: $underTablet) {
+    .header {
+        .headerPosition {
+            .hamburger {
+                width: 30px;
+                height: 30px;
+            }
+            .path, .buttonConnect, .chainBox, .wallet {
+                display: none;
+            }
+            .headerShowMobile {
+                display: block;
+                width: 100vw;
+                height: 100vh;
+                padding: 20px;
+                .path, .buttonConnect {
+                    display: block;
+                }
+                .path {
+                    margin: 20px 0 0;
+                    padding-bottom: 20px;
+                    font-size: 16px;
+                    border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.2);
+                }
+                .buttonConnect, .chainBox, .wallet {
+                    width: 100%;
+                    margin: 20px 0;
+                }
+                .chainBox, .wallet {
+                    display: flex;
+                }
+            }
+        }
+    }
+    .footer {
+        height: 350px;
+        padding: 30px 0 20px;
+        .footerContent {
+            display: block;
+            text-align: center;
+            .footerLeft {
+                .logo {
+                    margin: 0 auto;
+                }
+                .socail {
+                    justify-content: center;
+                }
+            }
+            .footerRight {
+                .siteMap {
+                    margin-top: 20px;
+                }
+                .path {
+                    grid-template-columns: 90px 90px;
+                    justify-content: center;
+                }
+            }
+        }
+        .footerDes {
+            margin-top: 30px;
+            font-size: 10px;
+        }
+    }
+
+    .commingSoon {
+        height: calc(100vh - 408px);
+    }
+}

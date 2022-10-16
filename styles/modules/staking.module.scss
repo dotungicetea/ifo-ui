@@ -1,0 +1,137 @@
+.banner {
+    padding: 113px 0 186px;
+    text-align: center;
+    border-bottom: 4px solid #dbdbdb;
+    h1 {
+        margin-bottom: 14px;
+        font-weight: 700;
+        font-size: 60px;
+    }
+    h2 {
+        margin-bottom: 80px;
+        font-size: 40px;
+    }
+    .bannerContent {
+        .image {
+            width: 64px;
+            height: 64px;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 35px;
+            text-align: left;
+        }
+        p {
+            font-size: 16px;
+            line-height: 26px;
+            text-align: left;
+        }
+    }
+}
+.content {
+    max-width: 1093px;
+    margin: 0 auto;
+    padding: 48px 0 105px;
+    .contentData {
+        h2 {
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 60px;
+            .tooltip {
+                width: 33px;
+                height: 33px;
+            }
+        }
+        p {
+            font-size: 18px;
+            line-height: 34px;
+        }
+    }
+    .point {
+        display: grid;
+        grid-template-columns: 246px 246px 246px 246px;
+        gap: 44px;
+        margin-top: 36px;
+        margin-bottom: 67px;
+        div {
+            padding: 16px 0 24px;
+            background: #D9D9D9;
+            border: 1px solid #D7D6D6;
+            border-radius: 6px;
+            text-align: center;
+            h3 {
+                font-size: 18px;
+                line-height: 35px;
+            }
+            p {
+                margin-top: 3px;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 35px;
+            }
+        }
+        .bold {
+            background: #3C3C3C;
+            border: 1px solid #D7D6D6;
+            color: #FFFFFF;
+        }
+    }
+}
+.listTooltip {
+    font-size: 18px;
+    line-height: 34px;
+}
+.stakePool {
+    padding-top: 50px;
+    h2 {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 2px 50px 4px;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 60px;
+        background: #000000;
+        color: #FFFFFF;
+        span {
+            color: #00C7F4;
+            font-weight: 700;
+        }
+    }
+    .form {
+        margin-top: 30px;
+        padding: 40px 70px 48px;
+        background: #282828;
+        border: 1px solid #D7D6D6;
+        border-radius: 12px;
+        .logo {
+            width: 54px;
+            min-width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .formContent {
+            color: #FFFFFF;
+            h3 {
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 54px;
+                color: #72F34B;
+            }
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 26px;
+            }
+            .formContentData {
+                display: grid;
+                grid-template-columns: 400px 400px;
+                // gap: ;
+                .contentLeft {
+
+                }
+            }
+        }
+    }
+}

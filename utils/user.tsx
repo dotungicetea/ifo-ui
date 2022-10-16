@@ -1,4 +1,7 @@
+import { jsonParse } from ".";
+import { connectWalletApi } from "../services";
 import { requestNetwork } from "./setup-network";
+import { getETHBalance } from "./web3";
 
 export const connectWallet = async() => {
     try {
@@ -13,8 +16,15 @@ export const connectWallet = async() => {
     }
 }
 
-export const selectWalletNetwork = async(chainId: string, walletName: string, setLogin: any) => {
+export const selectWalletNetwork = async(chainId: string, walletName: string, setWalletConnect: any, close: any) => {
     await requestNetwork(chainId, walletName);
     const loginUser = await connectWallet();
-    setLogin(loginUser);
+    const balance = await getETHBalance(loginUser)
+    const walletConnectData = {chainId, balance, address: loginUser}
+    localStorage.setItem('walletConnectData', jsonParse(walletConnectData))
+    setWalletConnect(walletConnectData)
+    if (loginUser) {
+        await connectWalletApi({wallet: loginUser, predict_token_num: ''})
+    }
+    close();
 }

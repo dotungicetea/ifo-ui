@@ -1,0 +1,54 @@
+.modalConnect {
+    width: 100%;
+    max-width: 380px;
+    background: #242424;
+    border: 1px solid #44454B;
+    border-radius: 8px;
+    padding: 12px 12px 54px;
+    color: #FFFFFF;
+    .cross, .cross div {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    h2 {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28px;
+        text-align: center;
+    }
+    h3 {
+        width: 320px;
+        margin: 29px auto 0;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .listWallet {
+        width: 320px;
+        margin: 4px auto 0;
+        .listWalletItem {
+            width: 96px;
+            height: 80px;
+            background: #373737;
+            border-radius: 4px;
+            text-transform: capitalize;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            cursor: pointer;
+            div {
+                width: 30px;
+                height: 26px;
+                margin: 14px auto 8px;
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+        .disable {
+            filter: grayscale(100%);
+        }
+    }
+}
