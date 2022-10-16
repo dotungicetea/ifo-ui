@@ -27,7 +27,7 @@ const ButtonComponent = ({className, title, onClick}: Props) => {
         }
     }
 
-    return <ColorButton className={className} onClick={(e) => handleOnClick(e)}>{title}</ColorButton>
+    return <ColorButton className={className} onClick={(e: any) => handleOnClick(e)}>{title}</ColorButton>
 }
 
 export default ButtonComponent;

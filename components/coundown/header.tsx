@@ -10,7 +10,7 @@ import { HeaderObjPath } from "../../constants";
 
 const HeaderCoundown = () => {
     const [isShowModalConnect, setIsShowModalConnect] = useState(false);
-    const { loginUser } = useContext(UserContext);
+    // const { loginUser } = useContext(UserContext);
   
     const handleCloseModalConnect = () => {
       setIsShowModalConnect(false);
@@ -44,11 +44,11 @@ const HeaderCoundown = () => {
                   </span>
                 );
               })}
-              {loginUser ? (
+              {/* {loginUser ? (
                 <span>{loginUser}</span>
               ) : (
                   <ColorButton className="button-connect-wallet" onClick={() => handleShowModalConnect()}>Connect wallet</ColorButton>
-              )}
+              )} */}
               <ConnectWalletModal
                 isShow={isShowModalConnect}
                 onClose={handleCloseModalConnect}
