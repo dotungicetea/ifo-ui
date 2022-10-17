@@ -24,7 +24,11 @@ export const selectWalletNetwork = async(chainId: string, walletName: string, se
     localStorage.setItem('walletConnectData', jsonParse(walletConnectData))
     setWalletConnect(walletConnectData)
     if (loginUser) {
-        await connectWalletApi({wallet: loginUser, predict_token_num: ''})
+        await connectWalletApi({wallet: loginUser, predict_token_num: ''}).then((res) => {
+            console.log('update wallet')
+        }).catch((err) => {
+            console.log(err)
+        })
     }
     close();
 }

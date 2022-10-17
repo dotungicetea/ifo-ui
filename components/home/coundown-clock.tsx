@@ -15,7 +15,11 @@ const CoundownClock = () => {
 
   const submit = () => {
     if (predictToken) {
-      connectWalletApi({wallet: walletConnect?.address, predict_token_num: predictToken})
+      connectWalletApi({wallet: walletConnect?.address, predict_token_num: predictToken}).then((res) => {
+        console.log("update answer")
+      }).catch((err) => {
+        console.log(err)
+      })
     }
   }
 
